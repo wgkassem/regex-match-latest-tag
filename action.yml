@@ -1,0 +1,19 @@
+name: 'Regex search git tags'
+description: 'Search for a regex pattern in repo tags and return the most recent one'
+author: '@wgkassem'
+inputs:
+  regex:
+    description: 'Target pattern'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+outputs:
+  tag:
+    description: 'The most recent tag substring that matches the pattern'
+  commit:
+    description: 'The commit hash of the most recent tag that matches the pattern'
+branding:
+  icon: 'search'
+  color: 'blue'
+
